@@ -10,6 +10,7 @@ const SpecialChart = () => {
       .then((data) => {
         const loadedData = data.data.data;
         const phoneData = loadedData.map((phone) => {
+          //ekhane jeheto orthat api te kno number nai se jonno obeject er jekhene number ache ta (-)split kre doita object vaklue create kora hpoiche
           const parts = phone.slug.split("-");
           const ph = {
             name: parts[0],
